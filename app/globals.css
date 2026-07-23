@@ -1,26 +1,146 @@
 @import "tailwindcss";
 
+/* ── Design tokens (dark theme, locked) ───────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-deep: #0b0b0d;
+  --bg-panel: #111114;
+  --graphite: #1c1c1f;
+  --txt-primary: #f2f2f2;
+  --txt-muted: #9a9a9f;
+  --line: rgba(168, 122, 66, 0.14);
+  --copper: #a87a42;
+  --gold: #ffaa40;
+  --gold-glow: rgba(255, 170, 64, 0.45);
 }
 
+/* Expose tokens + fonts as Tailwind utilities (v4) */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-bg-deep: var(--bg-deep);
+  --color-bg-panel: var(--bg-panel);
+  --color-graphite: var(--graphite);
+  --color-txt-primary: var(--txt-primary);
+  --color-txt-muted: var(--txt-muted);
+  --color-copper: var(--copper);
+  --color-gold: var(--gold);
+  --color-line: var(--line);
+
+  --font-display: var(--font-space-grotesk);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px; /* fixed navbar clearance for anchors */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-deep);
+  color: var(--txt-primary);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Reusable atmospheric layers ──────────────────────────────────── */
+
+/* Copper/gold radial aura for the hero */
+.aura::before {
+  content: "";
+  position: absolute;
+  inset: -20% -10% auto -10%;
+  height: 120%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(42% 55% at 78% 18%, rgba(255, 170, 64, 0.12), transparent 70%),
+    radial-gradient(38% 50% at 12% 8%, rgba(168, 122, 66, 0.14), transparent 72%);
+  animation: aura-drift 14s ease-in-out infinite alternate;
+}
+
+@keyframes aura-drift {
+  0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.85; }
+  100% { transform: translate3d(0, -2%, 0) scale(1.06); opacity: 1; }
+}
+
+/* Faint technical dot-grid */
+.dot-grid {
+  background-image: radial-gradient(rgba(242, 242, 242, 0.05) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+/* Faint copper grid lines (used behind Projects) */
+.grid-lines {
+  background-image:
+    linear-gradient(to right, rgba(168, 122, 66, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(168, 122, 66, 0.06) 1px, transparent 1px);
+  background-size: 58px 58px;
+}
+
+/* Copper → gold gradient text (hero name / role only) */
+.gradient-copper {
+  background: linear-gradient(135deg, #ffaa40 0%, #ffd580 38%, #a87a42 78%, #ffaa40 100%);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+@keyframes shimmer {
+  to { background-position: 220% center; }
+}
+
+/* Pulsing glow for the primary CV pill */
+.glow-pulse {
+  animation: glow-pulse 3.6s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 170, 64, 0.0); }
+  50% { box-shadow: 0 0 26px -4px var(--gold-glow); }
+}
+
+/* Seamless marquee (two copies translate -50%) */
+.marquee-track {
+  animation: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+/* Corner-bracket detail (signature accent on framed elements) */
+.brackets::before,
+.brackets::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: var(--copper);
+  pointer-events: none;
+}
+.brackets::before {
+  top: -6px;
+  left: -6px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+.brackets::after {
+  bottom: -6px;
+  right: -6px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+
+/* ── Reduced motion: collapse all decorative motion ───────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .aura::before,
+  .gradient-copper,
+  .glow-pulse,
+  .marquee-track {
+    animation: none !important;
+  }
 }
