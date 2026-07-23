@@ -11,8 +11,13 @@ export function Stack() {
   const { t } = useLang();
 
   return (
-    <section id="stack" className="dot-grid relative py-24 md:py-32">
-      <div className="mx-auto max-w-[1260px] px-5">
+    <section id="stack" className="dot-grid relative overflow-hidden py-24 md:py-32">
+      {/* colorful copper/gold glows */}
+      <div className="pointer-events-none absolute -top-32 left-1/2 h-80 w-[70rem] max-w-full -translate-x-1/2 rounded-full bg-copper/[0.12] blur-[130px]" />
+      <div className="pointer-events-none absolute -right-24 top-1/3 h-96 w-96 rounded-full bg-gold/[0.09] blur-[120px]" />
+      <div className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-copper/[0.09] blur-[120px]" />
+
+      <div className="relative mx-auto max-w-[1260px] px-5">
         <SectionHeader title={t(STACK_INTRO.label)} />
 
         <div className="flex flex-col gap-12 md:gap-16">

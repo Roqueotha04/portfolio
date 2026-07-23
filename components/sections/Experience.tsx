@@ -12,7 +12,12 @@ export function Experience() {
 
   return (
     <section id="experience" className="relative overflow-hidden py-24 md:py-32">
-      <div className="pointer-events-none absolute -left-40 top-1/3 h-96 w-96 rounded-full bg-copper/[0.07] blur-[130px]" />
+      <div className="pointer-events-none absolute inset-0 grid-lines [mask-image:radial-gradient(ellipse_at_center,black,transparent_78%)]" />
+      <div className="pointer-events-none absolute -top-32 left-1/2 h-80 w-[70rem] max-w-full -translate-x-1/2 rounded-full bg-copper/[0.10] blur-[130px]" />
+      <div className="pointer-events-none absolute -right-24 top-1/4 h-96 w-96 rounded-full bg-gold/[0.07] blur-[120px]" />
+      <div className="pointer-events-none absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-copper/[0.08] blur-[130px]" />
+      <div className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-gold/[0.085] blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-0 left-1/2 h-64 w-[60rem] max-w-full -translate-x-1/2 rounded-full bg-copper/[0.10] blur-[130px]" />
 
       <div className="relative mx-auto max-w-[1260px] px-5">
         <SectionHeader title={t(EXPERIENCE.label)} />

@@ -25,6 +25,9 @@ export function Contact() {
   return (
     <section id="contact" className="relative overflow-hidden py-24 md:py-32">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(168,122,66,0.10),transparent_70%)]" />
+      {/* left-side glows near the top (bridge from Skills) */}
+      <div className="pointer-events-none absolute -left-28 -top-16 h-96 w-96 rounded-full bg-copper/[0.10] blur-[130px]" />
+      <div className="pointer-events-none absolute -left-16 top-1/3 h-72 w-72 rounded-full bg-gold/[0.07] blur-[120px]" />
 
       <div className="relative mx-auto max-w-[1260px] px-5">
         <SectionHeader title={t(CONTACT.label)} align="center" />

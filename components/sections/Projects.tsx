@@ -25,10 +25,6 @@ export function Projects() {
 
   return (
     <section id="projects" className="relative overflow-hidden border-t border-line bg-[#0d0c0c] py-24 md:py-32">
-      {/* decorative grid + top copper glow */}
-      <div className="pointer-events-none absolute inset-0 grid-lines [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]" />
-      <div className="pointer-events-none absolute -top-24 left-1/2 h-72 w-[60rem] max-w-full -translate-x-1/2 rounded-full bg-copper/10 blur-[120px]" />
-
       <div className="relative mx-auto max-w-[1260px] px-5">
         <SectionHeader title={t(PROJECTS_INTRO.label)} subtitle={t(PROJECTS_INTRO.intro)} />
 

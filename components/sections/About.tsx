@@ -13,9 +13,11 @@ export function About() {
 
   return (
     <section id="about" className="relative overflow-hidden py-24 md:py-32">
-      {/* copper aura blob */}
-      <div className="pointer-events-none absolute -right-32 top-1/4 h-96 w-96 rounded-full bg-copper/10 blur-[120px]" />
-      <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-gold/[0.06] blur-[100px]" />
+      {/* grid pattern + colorful copper/gold glows */}
+      <div className="pointer-events-none absolute inset-0 grid-lines [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
+      <div className="pointer-events-none absolute -top-32 left-1/2 h-80 w-[70rem] max-w-full -translate-x-1/2 rounded-full bg-copper/[0.10] blur-[130px]" />
+      <div className="pointer-events-none absolute -right-24 top-1/4 h-96 w-96 rounded-full bg-gold/[0.06] blur-[120px]" />
+      <div className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-copper/[0.08] blur-[110px]" />
 
       <div className="relative mx-auto max-w-[1260px] px-5">
         <SectionHeader title={t(ABOUT.label)} />
