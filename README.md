@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Roque Othacehe | Fullstack Developer
 
-## Getting Started
+Sitio web personal y portfolio profesional desarrollado con **Next.js 16**, **React 19**, **TypeScript**, **Tailwind CSS v4** y **Framer Motion**.
 
-First, run the development server:
+> Fullstack Developer especializado en **Next.js** y **Spring Boot**, docente en la Universidad Tecnológica Nacional (UTN) y desarrollador en Estudio Ve.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Tecnologías Principales
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework:** Next.js 16 (App Router)
+- **UI & Estilos:** React 19, Tailwind CSS v4, CSS Variables (Design Tokens)
+- **Animaciones:** Framer Motion
+- **Iconos:** React Icons, Phosphor Icons
+- **Lenguaje:** TypeScript
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Características Destacadas
 
-To learn more about Next.js, take a look at the following resources:
+- 🎨 **Diseño Moderno & Glassmorphism:** Paleta con tonos cobre (`#A87A42`) y dorado (`#FFAA40`), superficies oscuras elegantes y efectos de transparencia.
+- 🌐 **Soporte Bilingüe (i18n):** Toggle de idioma global entre Español (por defecto) e Inglés.
+- 📱 **Totalmente Responsivo:** Optimizado para dispositivos móviles, tablets y monitores de alta resolución.
+- ⚡ **Animaciones Fluidas:** Transiciones de scroll e interacción dinámica.
+- 💼 **Muestra de Proyectos & Experiencia:** Secciones detalladas con proyectos en producción (Felton Web, Estudio Ve, Velmor, etc.) y experiencia profesional.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Desarrollo Local
 
-## Deploy on Vercel
+### Requisitos Previos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Node.js:** 18+ o superior
+- **npm** (o `yarn` / `pnpm` / `bun`)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Instalación
+
+1. Clona el repositorio e instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+2. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+3. Abre en tu navegador [http://localhost:3000](http://localhost:3000) para ver la aplicación en ejecución.
+
+---
+
+## 📋 Comandos Disponibles
+
+| Comando | Descripción |
+|---|---|
+| `npm run dev` | Inicia el servidor de desarrollo |
+| `npm run build` | Compila la aplicación para producción |
+| `npm run start` | Arranca el servidor de producción compilado |
+| `npm run lint` | Ejecuta ESLint para analizar la calidad de código |
+
+---
+
+## 📬 Contacto & Redes
+
+- **Email:** roqueotha04@gmail.com
+- **LinkedIn:** [Roque Othacehe](https://linkedin.com/in/roque-othacehe-a15085243)
+- **GitHub:** [@roqueotha04](https://github.com/roqueotha04)
+- **WhatsApp:** [+54 9 223 668-0996](https://wa.me/5492236680996)
